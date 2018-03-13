@@ -1,4 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <templates xml:space="preserve">
+    <t t-name="HomePageTemplate">
+        <div>Hello <t t-esc="widget.name"/></div>
+    </t>
+    <t t-name="InputTemplate">
+        <div>
+            Enter your name:
+            <input type="text" t-att-value="defaultName"/>
+            <div>Hello <t t-set="defaultName"/></div>
+        </div>
+    </t>
 </templates>

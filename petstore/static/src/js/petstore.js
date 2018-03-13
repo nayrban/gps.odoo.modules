@@ -9,15 +9,12 @@ odoo.define('petstore.petstore', function (require) {
     var QWeb = core.qweb;
 
     core.HomePage = Widget.extend({
+        template: "HomePageTemplate",
         init: function(parent) {
             this._super(parent);
-            console.log("Hello JS, I'm inside of init.");
+            this.name = "Mordecai";
         },
-        template: "HomePageTemplate",
         start: function() {
-            this.$el.append("<div>Hello dear Odoo user!</div>");
-            var greeting = new core.GreetingsWidget(this);
-            return greeting.appendTo(this.$el);
         }
     });
 

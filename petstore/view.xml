@@ -5,14 +5,9 @@
             <xpath expr="." position="inside">
                 <link rel="stylesheet" href="/petstore/static/src/css/petstore.css"/>
                 <script type="text/javascript" src="/petstore/static/src/js/petstore.js"/>
+                <script type="text/javascript" src="/petstore/static/src/js/input.js"/>
             </xpath>
         </template>
-        <template id="home_template">
-            <t t-name="HomePageTemplate">
-                <div style="background-color: red;">This is some simple HTML</div>
-            </t>
-        </template>
-
         <menuitem id="main_petstore_menu" name="Pet Store"/>
 
         <menuitem id="petstore_menu" name="Pet Store"
@@ -25,6 +20,14 @@
 
         <menuitem id="home_page_petstore_menu" name="Home Page" parent="petstore_menu"
                   action="action_home_page"/>
+
+        <record id="action_input" model="ir.actions.client">
+            <field name="name">Input Template</field>
+            <field name="tag">petstore.input</field>
+        </record>
+
+        <menuitem id="input_menu" name="Input Page" parent="petstore_menu"
+                  action="action_input"/>
 
         <record model="ir.ui.view" id="message_of_the_day_tree">
             <field name="name">message_of_the_day_tree</field>
