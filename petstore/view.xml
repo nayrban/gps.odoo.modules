@@ -1,17 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<openerp>
+<odoo>
     <data>
         <template id="assets_backend" name="petstore_assets" inherit_id="web.assets_backend">
             <xpath expr="." position="inside">
-                <link rel="stylesheet" href="/oepetstore/static/src/css/petstore.css"/>
-                <script type="text/javascript" src="/oepetstore/static/src/js/petstore.js"/>
+                <link rel="stylesheet" href="/petstore/static/src/css/petstore.css"/>
+                <script type="text/javascript" src="/petstore/static/src/js/petstore.js"/>
             </xpath>
         </template>
+        <template id="home_template">
+            <t t-name="HomePageTemplate">
+                <div style="background-color: red;">This is some simple HTML</div>
+            </t>
+        </template>
 
-        <menuitem id="main_petstore_menu" name="Pet Store" />
+        <menuitem id="main_petstore_menu" name="Pet Store"/>
 
         <menuitem id="petstore_menu" name="Pet Store"
-            parent="main_petstore_menu" />
+                  parent="main_petstore_menu"/>
 
         <record id="action_home_page" model="ir.actions.client">
             <field name="name">Pet Store Home</field>
@@ -19,7 +24,7 @@
         </record>
 
         <menuitem id="home_page_petstore_menu" name="Home Page" parent="petstore_menu"
-            action="action_home_page"/>
+                  action="action_home_page"/>
 
         <record model="ir.ui.view" id="message_of_the_day_tree">
             <field name="name">message_of_the_day_tree</field>
@@ -53,7 +58,7 @@
         </record>
 
         <menuitem id="message_day" name="Message of the day" parent="petstore_menu"
-            action="message_of_the_day_action"/>
+                  action="message_of_the_day_action"/>
 
         <record model="ir.actions.act_window" id="pet_toys_action">
             <field name="name">Pet Toys</field>
@@ -74,6 +79,6 @@
         </record>
 
         <menuitem id="pet_toys_action_menu" name="Pet Toys" parent="petstore_menu"
-            action="pet_toys_action"/>
+                  action="pet_toys_action"/>
     </data>
-</openerp>
+</odoo>
