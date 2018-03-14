@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ivy-module version="2.0">
+  <info organisation="com.gpshiring.petsore" module="petstore/petstore" revision="1.1" status="integration" publication="20180314115901"/>
+  <configurations/>
+  <publications>
+    <artifact name="petstore/petstore" type="gz" ext="gz"/>
+  </publications>
+  <dependencies/>
+</ivy-module>
