@@ -1,5 +1,6 @@
 from odoo import api, fields, models
 
+
 class message_of_the_day(models.Model):
     _name = "oepetstore.message_of_the_day"
 
@@ -15,3 +16,12 @@ class product(models.Model):
     _inherit = "product.product"
 
     max_quantity = fields.Float(string="Maximum Quantity")
+
+
+class PetModel(models.Model):
+    _name = "pet.model"
+
+    # Basic Fields
+    name = fields.Char('Pet Name')
+    gender = fields.Selection([('male', 'Male'), ('female', 'Female')], string='Gender')
+    age = fields.Char('Pet Age')

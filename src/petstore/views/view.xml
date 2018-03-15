@@ -83,5 +83,35 @@
 
         <menuitem id="pet_toys_action_menu" name="Pet Toys" parent="petstore_menu"
                   action="pet_toys_action"/>
+
+        <record id="pet_form_view" model="ir.ui.view" >
+            <field name="name">pet_form_view</field>
+            <field name="model">pet.model</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <h2><field name="name" placeholder="Name"/></h2>
+                        <group string="Pet Information">
+                            <group>
+                                <field name="age"/>
+                            </group>
+                            <group>
+                                <field name="gender"/>
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="pet_action_window">
+            <field name="name">Pets</field>
+            <field name="res_model">pet.model</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <menuitem id="pet_form_view_menu" name="My Pets" parent="petstore_menu"
+                  action="pet_action_window"/>
     </data>
 </odoo>
