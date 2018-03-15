@@ -1,11 +1,11 @@
 {
-    'name' : 'OpenERP Pet Store',
+    'name' : 'Pet Store',
     'version': '1.0',
     'summary': 'Sell pet toys',
     'category': 'Tools',
     'description':
         """
-OpenERP Pet Store
+Pet Store
 =================
 
 A wonderful application to sell pet toys.

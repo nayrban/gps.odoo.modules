@@ -84,23 +84,16 @@
         <menuitem id="pet_toys_action_menu" name="Pet Toys" parent="petstore_menu"
                   action="pet_toys_action"/>
 
-        <record id="pet_form_view" model="ir.ui.view" >
-            <field name="name">pet_form_view</field>
+        <record model="ir.ui.view" id="pet_tree">
+            <field name="name">pet_tree</field>
             <field name="model">pet.model</field>
+            <field name="type">tree</field>
             <field name="arch" type="xml">
-                <form>
-                    <sheet>
-                        <h2><field name="name" placeholder="Name"/></h2>
-                        <group string="Pet Information">
-                            <group>
-                                <field name="age"/>
-                            </group>
-                            <group>
-                                <field name="gender"/>
-                            </group>
-                        </group>
-                    </sheet>
-                </form>
+                <tree string="Message of the day">
+                    <field name="name"/>
+                    <field name="age"/>
+                    <field name="gender"/>
+                </tree>
             </field>
         </record>
 
@@ -113,5 +106,29 @@
 
         <menuitem id="pet_form_view_menu" name="My Pets" parent="petstore_menu"
                   action="pet_action_window"/>
+
+        <record model="ir.ui.view" id="client_tree">
+            <field name="name">client_tree</field>
+            <field name="model">client.model</field>
+            <field name="type">tree</field>
+            <field name="arch" type="xml">
+                <tree >
+                    <field name="firstName"/>
+                    <field name="lastName"/>
+                    <field name="city"/>
+                    <field name="state"/>
+                </tree>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="client_action_view">
+            <field name="name">Clients</field>
+            <field name="res_model">client.model</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <menuitem id="client_form_view_menu" name="Clients" parent="petstore_menu"
+                  action="client_action_view"/>
     </data>
 </odoo>
