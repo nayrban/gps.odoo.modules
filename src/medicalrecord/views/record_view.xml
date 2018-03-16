@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <menuitem name="Pet Medical Record" id="top_menu"/>
+    <menuitem name="Medical Record" id="sub_menu" parent="top_menu"/>
+    <record id="menu_action" model="ir.actions.act_window">
+        <field name ="name">Description</field>
+        <field name ="res_model">record.model</field>
+        <field name ="view_type">form</field>
+        <field name ="view_model">tree,form</field>
+        <field name ="help" type="html">
+            <p class="oe_view_nocontent_create">
+                Click here to create new item!
+            </p>
+        </field>
+    </record>
+    <menuitem name="Description" id="description_sub_menu" parent="sub_menu" action="menu_action"/>
+</odoo>
