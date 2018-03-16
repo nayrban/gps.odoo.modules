@@ -55,7 +55,7 @@ class ClientModel(models.Model):
                 data.age = age
 
     # Basic Fields
-    pet_model_ids = fields.one2many('pet.model', 'client_id',
+    pet_model_ids = fields.One2many('pet.model', 'client_id',
                                    string='Pet'),
     firstName = fields.Char("First Name")
     lastName = fields.Char("Last Name")

@@ -1,0 +1,18 @@
+.navbar-inverse .navbar-text {
+  color: #DDD;
+}
+.navbar-inverse .navbar-nav > li > a {
+  color: #DDDDDD;
+}
+
+/*Let site menu*/
+.o_web_client > .o_main .o_sub_menu .o_sub_menu_content .oe_secondary_menu_section {
+  font-weight: bold;
+  margin-left: 8px;
+  color: #0C3C60;
+}
+
+.nav-pills > li.active > a, .nav-pills > li.active > a:hover, .nav-pills > li.active > a:focus {
+  color: white;
+  background-color: #0C3C60;
+}
