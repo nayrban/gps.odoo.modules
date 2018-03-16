@@ -22,11 +22,11 @@
 ##############################################################################
 
 {
-    'name': "Gps Ui",
+    'name': "Gps Hiring Ui",
     'summary': "Change Odoo ui color",
     'description': "",
-    'author': "1200 Web Development",
-    'website': "http://1200wd.com",
+    'author': "GPS Hiring",
+    'website': "http://http://gpshiring.com",
     'category': 'Custom',
     'version': '8.0.1.2',
     'depends': [],

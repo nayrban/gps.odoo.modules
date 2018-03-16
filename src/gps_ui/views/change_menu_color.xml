@@ -17,5 +17,10 @@
                 <link rel="stylesheet" href="/gps_ui/static/src/css/buttons.css"/>
             </xpath>
         </template>
+        <template id="change_forms_color" name="change_menu_color assets" inherit_id="web.assets_backend">
+            <xpath expr="." position="inside">
+                <link rel="stylesheet" href="/gps_ui/static/src/css/forms.css"/>
+            </xpath>
+        </template>
     </data>
 </openerp>

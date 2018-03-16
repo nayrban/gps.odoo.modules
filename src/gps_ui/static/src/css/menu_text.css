@@ -5,6 +5,16 @@
   color: #DDDDDD;
 }
 
+.navbar-inverse .navbar-nav > .active > a, .navbar-inverse .navbar-nav > .active > a:hover, .navbar-inverse .navbar-nav > .active > a:focus {
+  color: #fff;
+  background-color: #6EA4CA;
+}
+
+.navbar-inverse .navbar-nav > li > a:hover, .navbar-inverse .navbar-nav > li > a:focus {
+  color: #fff;
+  background-color: #6EA4CA;
+}
+
 /*Let site menu*/
 .o_web_client > .o_main .o_sub_menu .o_sub_menu_content .oe_secondary_menu_section {
   font-weight: bold;
