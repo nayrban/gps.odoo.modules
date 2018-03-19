@@ -32,7 +32,7 @@ class PetModel(models.Model):
                 age = current_year - birth_year
                 data.age = age
     # Basic Fields
-    client_id = fields.Many2one('client.model', string='Client',  required=True)
+    client_id = fields.Many2one('client.model', 'Client', required=True)
     name = fields.Char('Name')
     gender = fields.Selection([('male', 'Male'), ('female', 'Female')], string='Gender')
     age = fields.Float(compute=calculate_age, string='Age')
@@ -42,6 +42,7 @@ class PetModel(models.Model):
 
 class ClientModel(models.Model):
     _name = "client.model"
+    _rec_name = "firstName"
 
     @api.depends('dob')
     def calculate_age(self):
