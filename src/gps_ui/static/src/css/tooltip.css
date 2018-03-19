@@ -1,0 +1,28 @@
+
+/*Tooltip*/
+.o_tooltip {
+    border: 2px solid #6EA4CA;
+    background-color: #6EA4CA;
+}
+
+.o_tooltip.active.bottom::before {
+    border-bottom-color: #6EA4CA;
+}
+
+.o_tooltip.bottom::before {
+    border-bottom-color: #6EA4CA;
+}
+
+.o_tooltip::after {
+    border-color: #F4F5CF;
+    background: radial-gradient(#6EA4CA, #0C3C60);
+}
+
+
+/*Components help tooltip*/
+.tooltip .tooltip-inner .oe_tooltip_string {
+    background-color: #0C3C60;
+    color: white;
+    font-weight: bold;
+    padding: 5px;
+}

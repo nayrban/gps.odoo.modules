@@ -22,3 +22,13 @@
 .table-striped > tbody > tr:nth-of-type(odd) {
     background-color: #F4F5CF;
 }
+
+/*Serach View*/
+.o_searchview .o_searchview_autocomplete li.o-selection-focus {
+    background-color: #0C3C60;
+}
+
+.o_loading {
+    background-color: #F4F5CF;
+    color: #0C3C60;
+}

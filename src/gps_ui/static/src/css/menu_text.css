@@ -26,3 +26,14 @@
   color: white;
   background-color: #0C3C60;
 }
+
+
+/*Navigation*/
+a {
+  color: #0C3C60;
+}
+
+a:hover, a:focus {
+  color: #6EA4CA;
+}
+

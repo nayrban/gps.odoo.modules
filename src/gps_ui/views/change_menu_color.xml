@@ -22,5 +22,10 @@
                 <link rel="stylesheet" href="/gps_ui/static/src/css/forms.css"/>
             </xpath>
         </template>
+        <template id="change_tooltip_color" name="change_menu_color assets" inherit_id="web.assets_backend">
+            <xpath expr="." position="inside">
+                <link rel="stylesheet" href="/gps_ui/static/src/css/tooltip.css"/>
+            </xpath>
+        </template>
     </data>
 </openerp>
