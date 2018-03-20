@@ -38,6 +38,7 @@ class PetModel(models.Model):
     age = fields.Float(compute=calculate_age, string='Age')
     dob = fields.Date('Date of Birth')
     breed = fields.Char('Breed')
+    pet_image = fields.Binary("Image", attachment=True, help="This field holds the image used as avatar for this contact, limited to 1024x1024px",)
 
 
 class ClientModel(models.Model):
@@ -65,3 +66,4 @@ class ClientModel(models.Model):
     grade = fields.Selection([("sr", "Sr."), ("Mr", "Mr.")], string="Grade")
     city = fields.Char("City")
     state = fields.Char("State")
+    image = fields.Binary("Image", attachment=True, help="This field holds the image used as avatar for this contact, limited to 1024x1024px",)
